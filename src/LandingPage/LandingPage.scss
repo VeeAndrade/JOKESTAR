@@ -1,0 +1,44 @@
+* {
+  z-index: 0; 
+}
+
+.landing-page-section {
+  border: solid 1px rgb(22, 156, 218);
+  height: 30rem;
+  width: 60%;
+  margin-top: 5rem;
+}
+
+.joke-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+}
+
+.landing-page-joke {
+  color: #fff;
+}
+
+.landing-action-buttons {
+  height: 20%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.next-joke-button,
+.favorite-joke-button {
+  width: 250px;
+  height: 50px;
+  font-size: 1em;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.205);
+  border-radius: 5px;
+  font-weight: bold;
+
+  &:hover {
+    cursor: pointer;
+    color: rebeccapurple;
+    background-color: #fff;
+  }
+}
