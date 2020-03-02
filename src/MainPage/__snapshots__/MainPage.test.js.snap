@@ -39,7 +39,9 @@ exports[`MainPage should match the snapshot 1`] = `
   <section
     className="display-content-section"
   >
-    <h3>
+    <h3
+      className="intro"
+    >
       Welcome to JOKESTAR!
     </h3>
   </section>
