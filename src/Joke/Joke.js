@@ -1,12 +1,12 @@
 import React from 'react';
 import './Joke.scss';
 
-const Joke = joke => {
-  const { setup, punchline} = joke.joke
+const Joke = jokeObj => {
+  const { setup, joke, punchline, delivery } = jokeObj.joke
   return(
     <article className='joke-wrapper'>
-      <h3 className='joke-setup'>{setup}</h3>
-      <p className='joke-punchline'>{punchline}</p>
+      <h3 className='joke-setup'>{setup || joke}</h3>
+      <p className='joke-punchline'>{punchline || delivery}</p>
     </article>
   )
 }
