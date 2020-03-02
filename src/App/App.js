@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
 import Nav from '../Nav/Nav';
+import Login from '../Login/Login';
+import MainPage from '../MainPage/MainPage';
 import LandingPage from '../LandingPage/LandingPage';
 import { Route } from 'react-router-dom';
-import Login from '../Login/Login';
+import { updateUser } from '../Actions'
+import { connect } from 'react-redux';
 import './App.scss';
-import MainPage from '../MainPage/MainPage';
 
-class App extends Component {
+export class App extends Component {
   constructor() {
     super();
-    this.state = {
-      user: {
-        username: '',
-        password: ''
-      }
-    }
+  }
+
+  logoutUser = () => {
+    this.props.updateUser('')
   }
 
   render() {
     return (
       <main className='main-app'>
-        <Nav />
+        <Nav logoutUser={this.logoutUser}/>
         <Route exact path='/'>
           <LandingPage />
         </Route>
@@ -31,4 +31,8 @@ class App extends Component {
   }
 }
 
-export default App;
+export const mapDispatchToProps = dispatch => ({
+  updateUser: username => dispatch(updateUser(username))
+})
+
+export default connect(null, mapDispatchToProps)(App);

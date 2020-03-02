@@ -3,8 +3,10 @@ import { getSpecificJoke } from '../apiCalls';
 import { connect } from 'react-redux';
 import './JokeForm.scss';
 import { setJoke } from '../Actions'
+import { addFetchParams } from '../Actions'
 
-class JokeForm extends Component {
+
+export class JokeForm extends Component {
   constructor() {
     super();
     this.state = {
@@ -25,6 +27,7 @@ class JokeForm extends Component {
   updateClickedButton = async (e) => {
     e.preventDefault()
     this.props.findClickedBtn(e)
+    this.props.addFetchParams(this.state)
     let promiseJoke = await getSpecificJoke(this.state)
     this.props.updateJoke(promiseJoke)
   }
@@ -64,11 +67,13 @@ class JokeForm extends Component {
 }
 
 export const mapStateToProps = state => ({
-  joke: state.joke
+  joke: state.joke,
+  fetchParams: state.fetchParams
 })
 
 export const mapDispatchToProps = dispatch => ({
-  updateJoke: joke => dispatch(setJoke(joke))
+  updateJoke: joke => dispatch(setJoke(joke)),
+  addFetchParams: options => dispatch(addFetchParams(options))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(JokeForm);

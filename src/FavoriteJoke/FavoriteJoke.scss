@@ -1,10 +1,17 @@
+$faded-purple: rgba(74, 21, 160, 0.452);
+$faded-blue: rgba(18, 125, 247, 0.452);
+$bright-green: rgb(0, 255, 136);
+
 .favorite-joke-card {
   color: #fff;
-  background: rgba(58, 126, 27, 0.473);
-  width: 550px;
-  height: 150px;
+  background: $faded-purple;
+  width: 90%;
+  height: 20%;
+  margin-top: 20px;
+  text-align: center;
+  border: solid 1px $bright-green;
 }
 
 .setup {
-  color: black;
+  color: #fff;
 }

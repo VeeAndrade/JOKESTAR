@@ -5,7 +5,7 @@ import { setJoke } from '../Actions'
 import { connect } from 'react-redux'
 import './LandingPage.scss';
 
-class LandingPage extends Component {
+export class LandingPage extends Component {
   constructor() {
     super();
     this.state = {

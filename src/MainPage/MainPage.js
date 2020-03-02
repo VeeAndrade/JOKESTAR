@@ -10,7 +10,7 @@ import { favoriteJoke } from '../Actions';
 import { connect } from 'react-redux';
 import './MainPage.scss';
 
-class MainPage extends Component {
+export class MainPage extends Component {
   constructor() {
     super();
     this.state = {
@@ -33,7 +33,7 @@ class MainPage extends Component {
       case 'favorites':
         return <Favorites />
       default:
-        return <h3>Welcome to JOKESTAR!</h3>
+        return <h3 className='intro'>Welcome to JOKESTAR!</h3>
     }
   }
 
@@ -48,7 +48,7 @@ class MainPage extends Component {
   }
 
   grabNSFWJoke = async () => {
-    let promiseJoke = await getSpecificJoke(this.state)
+    let promiseJoke = await getSpecificJoke(this.props.fetchParams)
     this.props.updateJoke(promiseJoke)
     return promiseJoke
   }
@@ -71,7 +71,8 @@ class MainPage extends Component {
 }
 
 export const mapStateToProps = state => ({
-  joke: state.joke
+  joke: state.joke,
+  fetchParams: state.fetchParams
 })
 
 export const mapDispatchToProps = dispatch => ({

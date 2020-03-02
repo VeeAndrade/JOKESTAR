@@ -1,12 +1,18 @@
+$faded-purple: rgba(74, 21, 160, 0.452);
+$faded-blue: rgba(18, 125, 247, 0.452);
+$bright-green: rgb(0, 255, 136);
+
 * {
   z-index: 0; 
 }
 
 .landing-page-section {
-  border: solid 1px rgb(22, 156, 218);
+  border: solid 2px $bright-green;
+  background: linear-gradient($faded-purple, $faded-blue);
   height: 30rem;
   width: 60%;
   margin-top: 5rem;
+  border-radius: 5px;
 }
 
 .joke-section {
@@ -48,6 +54,6 @@
   height: 15%;
   display: flex;
   justify-content: center;
-  color: rgb(0, 255, 170);
+  color: rgba(211, 11, 121, 0.986);
   font-weight: bold;
 }

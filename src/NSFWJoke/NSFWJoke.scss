@@ -1,0 +1,32 @@
+$faded-purple: rgba(74, 21, 160, 0.452);
+$faded-blue: rgba(18, 125, 247, 0.452);
+$bright-green: rgb(0, 255, 136);
+
+.nsfw-joke-container {
+  height: 80%;
+  width: 95%;
+}
+
+.buttons-section {
+  height: 5rem;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.next-joke-btn,
+.favorite-btn {
+  width: 35%;
+  height: 2.5rem;
+  border: solid 1px $bright-green;
+  background-color: transparent;
+  color: $bright-green;
+  font-size: 1.2em;
+  border-radius: 5px;
+  font-weight: bold;
+
+    &:hover {
+      background-color: $bright-green;
+      color: rebeccapurple;
+  }
+}

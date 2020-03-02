@@ -1,4 +1,10 @@
 .favorites-container {
-  border: solid 2px ;
+  border: solid 2px #fff;
   overflow: scroll;
+  height: 80%;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

@@ -5,7 +5,7 @@ import { updateUser } from '../Actions'
 import './Login.scss';
 // import { mapStateToProps, mapDispatchToProps } from '../LandingPage/LandingPage';
 
-class Login extends Component {
+export class Login extends Component {
   constructor() {
     super();
     this.state = {
@@ -53,8 +53,8 @@ class Login extends Component {
           </section>
           <section className='button-container'>
             {this.state.error !== true ? 
-              <Link to='/main-page'>
-                <button className='sign-in-button' onClick={(event) => this.verifyPassword(event)}>Sign In</button>
+              <Link to='/main-page' className='sign-in-button' onClick={(event) => this.verifyPassword(event)}>
+                Sign In
               </Link>
                : console.log(this.state.error)}
           </section>

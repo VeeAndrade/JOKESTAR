@@ -9,16 +9,6 @@ export const getRandomJoke = () => {
   )
 }
 
-export const getFeaturedJokes = category => {
-  return fetch(`https://sv443.net/jokeapi/v2/joke/${category}`)
-    .then(response => {
-      if (!response.ok) {
-        throw Error('200 status code not found: getRandomJoke throw error')
-      }
-      return response.json()
-    }
-  )
-}
 
 export const getSpecificJoke = (state) => {
   let options = Object.assign({}, {blacklistFlags:state.blacklistFlags, type:state.type})

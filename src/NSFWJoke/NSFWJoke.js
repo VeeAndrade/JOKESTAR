@@ -1,13 +1,13 @@
 import React from 'react';
+import './NSFWJoke.scss';
 import Joke from '../Joke/Joke';
-import { useSelector } from 'react-redux';
+import { connect } from 'react-redux';
 
-const NSFWJoke = (props) => {
-  const joke = useSelector(state => state.joke)
+export const NSFWJoke = (props) => {
   return (
-    <section className='safe-joke-container'>
+    <section className='nsfw-joke-container'>
       <section className='joke-section'>
-        <Joke joke={joke}/>
+        <Joke joke={props.joke}/>
       </section>
       <section className='buttons-section'>
         <button className='favorite-btn' onClick={props.favoriteJoke}>Favorite</button>
@@ -16,4 +16,8 @@ const NSFWJoke = (props) => {
     </section>)
 }
 
-export default NSFWJoke;
+export const mapStateToProps = state => ({
+  joke: state.joke
+})
+
+export default connect(mapStateToProps)(NSFWJoke);

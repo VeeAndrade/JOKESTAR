@@ -1,7 +1,7 @@
 import React from 'react';
 import './Joke.scss';
 
-const Joke = jokeObj => {
+export const Joke = jokeObj => {
   const { setup, joke, punchline, delivery } = jokeObj.joke
   return(
     <article className='joke-wrapper'>

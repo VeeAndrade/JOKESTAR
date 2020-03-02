@@ -1,9 +1,27 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import App from './App';
+import { App, mapDispatchToProps } from './App';
+import { updateUser } from '../Actions';
+import { shallow } from 'enzyme';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+describe('App', () => {
+  let wrapper
+
+  beforeEach(() => {
+    wrapper = shallow(<App />)
+  })
+  it('should match the snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+});
+
+describe('mapDispatchToProps', () => {
+  it('should call updateUser when logout user is called', () => {
+    let mockResponse = {username: 'EvilKitty'}
+    let mockDispatch = jest.fn();
+    let actionToDispatch = updateUser(mockResponse)
+    let mappedProps = mapDispatchToProps(mockDispatch)
+    mappedProps.updateUser(mockResponse)
+    expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
+  });
 });

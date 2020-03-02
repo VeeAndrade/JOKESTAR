@@ -1,11 +1,10 @@
 import React from 'react';
 import './Favorites.scss';
 import FavoriteJoke from '../FavoriteJoke/FavoriteJoke'
-import { useSelector } from 'react-redux';
+import { connect } from 'react-redux';
 
-const Favorites = () => {
-  const favorites = useSelector(state => state.favorites)
-  let favoritesArray = favorites.map(favorite => <FavoriteJoke jokeObj={favorite}/>)
+export const Favorites = (props) => {
+  let favoritesArray = props.favorites.map(favorite => <FavoriteJoke key={favorite.id} jokeObj={favorite}/>)
   return (
     <section className='favorites-container'>
       {favoritesArray}
@@ -13,4 +12,8 @@ const Favorites = () => {
   )
 }
 
-export default Favorites;
+export const mapStateToProps = state => ({
+  favorites: state.favorites
+})
+
+export default connect(mapStateToProps)(Favorites);
