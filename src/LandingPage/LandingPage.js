@@ -1,38 +1,44 @@
 import React, { Component } from 'react';
 import Joke from '../Joke/Joke';
 import { getRandomJoke } from '../apiCalls';
+import { setJoke } from '../Actions'
+import { connect } from 'react-redux'
 import './LandingPage.scss';
-
-//the objective of this component is to have a simple 
-//feature that loads up a new joke every time you hit 
-//the button but to get more feature, you would need 
-//to login to see
 
 class LandingPage extends Component {
   constructor() {
     super();
     this.state = {
-      joke: {
-        setup: 'How much does a polarbear weigh?', 
-        punchline: 'enough to break the ice'}
+      error: null
     }
   }
 
   fetchRandomJoke() {
     getRandomJoke()
     .then(joke => {
-      this.setState({joke: joke})
+      this.props.updateJoke(joke)
+
+      this.setState({error: null})
     })
+  }
+
+  checkUser = () => {
+    !this.props.username ? this.setState({
+      error: '*Login to favorite this joke*'
+    }) : console.log('error')
   }
 
   render() {
     return (
       <section className='landing-page-section'>
         <section className='joke-section'>
-          <Joke joke={this.state.joke}/>
+          <Joke joke={this.props.joke}/>
         </section>
+          <section className='must-login-error-section'>
+            <p className='error-msg'>{this.state.error}</p>
+          </section>
         <section className='landing-action-buttons'>
-          <button className='favorite-joke-button'>Favorite</button>
+          <button className = 'favorite-joke-button' onClick = {() => this.checkUser()}> Favorite </button>
           <button className='next-joke-button' onClick={() => this.fetchRandomJoke()}>Next joke</button>
         </section>
       </section>
@@ -40,4 +46,13 @@ class LandingPage extends Component {
   }
 }
 
-export default LandingPage
+export const mapStateToProps = state => ({
+  username: state.username,
+  joke: state.joke
+})
+
+export const mapDispatchToProps = dispatch => ({
+  updateJoke: joke => dispatch(setJoke(joke))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(LandingPage)
