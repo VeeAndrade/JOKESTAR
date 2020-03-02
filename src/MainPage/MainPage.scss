@@ -1,0 +1,37 @@
+.users-main-page {
+  display: flex; 
+  width: 98%;
+  height: 42rem;
+  margin-top: 2%;
+  align-items: center;
+  // border: solid 2px red;
+  background-color: rgba(11, 76, 119, 0.747);
+}
+
+.user-features-section {
+  height: 100%;
+  width: 25%;
+  border-right: solid 1px #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-button {
+  height: 4rem;
+  border: none;
+  margin-top: 2px;
+  font-size: 1.4em;
+
+    &:hover {
+      background-color: purple;
+    }
+}
+
+.display-content-section {
+  // border: solid 2px yellow;
+  width: 75%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

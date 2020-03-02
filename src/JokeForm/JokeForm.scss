@@ -1,0 +1,76 @@
+.joke-form-wrapper {
+  height: 90%;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  width: 95%;
+}
+
+.joke-form {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+}
+
+.joke-type-section,
+.joke-flags-section,
+.form-category-section,
+.submit-form-button {
+  // border: solid 1px pink;
+  height: 20%;
+  width: 80%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-label {
+  font-size: 1.4em;
+  margin-right: 10px;
+}
+
+.category-select-elem {
+  font-size: 1em;
+  height: 2rem;
+  width: 57%;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.submit-form-button {
+  // border: solid 2px orange;
+}
+
+.submit-specifications {
+  height: 35%;
+  width: 75%;
+  border-radius: 3px;
+  font-size: 1.1em;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(0, 255, 136);
+  }
+}
+
+.input-checkboxes:hover {
+  cursor: pointer;
+}
+
+.input-checkboxes {
+  // height: 2em;
+  // width: 2em;
+}
+
+.checkbox-span {
+  font-size: 1.1em;
+  margin-right: 10px;
+}
