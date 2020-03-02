@@ -1,37 +1,48 @@
+$faded-purple: rgba(74, 21, 160, 0.452);
+$faded-blue: rgba(18, 125, 247, 0.452);
+$bright-green: rgb(0, 255, 136);
+
+
 .users-main-page {
   display: flex; 
   width: 98%;
   height: 42rem;
   margin-top: 2%;
   align-items: center;
-  // border: solid 2px red;
-  background-color: rgba(11, 76, 119, 0.747);
+  background: linear-gradient($faded-purple, $faded-blue);
 }
 
 .user-features-section {
   height: 100%;
   width: 25%;
-  border-right: solid 1px #fff;
+  border-right: solid 1px $bright-green;
   display: flex;
   flex-direction: column;
 }
 
 .feature-button {
   height: 4rem;
-  border: none;
+  border: solid 1px $bright-green;
+  background-color: transparent;
+  color: $bright-green;
   margin-top: 2px;
   font-size: 1.4em;
 
     &:hover {
-      background-color: purple;
+      background-color: $bright-green;
+      color: rebeccapurple;
     }
 }
 
 .display-content-section {
-  // border: solid 2px yellow;
   width: 75%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.intro {
+  color: #fff;
+  font-size: 2.5em;
 }
