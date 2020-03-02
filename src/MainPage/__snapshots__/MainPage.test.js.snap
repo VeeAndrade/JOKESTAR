@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainPage should match the snapshot 1`] = `
+<section
+  className="users-main-page"
+>
+  <aside
+    className="user-features-section"
+  >
+    <button
+      className="feature-button"
+      onClick={[Function]}
+      value="safejoke"
+    >
+      Safe Jokes
+    </button>
+    <button
+      className="feature-button"
+      onClick={[Function]}
+      value="nsfw"
+    >
+      NSFW
+    </button>
+    <button
+      className="feature-button"
+      onClick={[Function]}
+      value="favorites"
+    >
+      Favorites
+    </button>
+    <button
+      className="feature-button"
+      onClick={[Function]}
+      value="clickMe"
+    >
+      Click Me
+    </button>
+  </aside>
+  <section
+    className="display-content-section"
+  >
+    <h3>
+      Welcome to JOKESTAR!
+    </h3>
+  </section>
+</section>
+`;

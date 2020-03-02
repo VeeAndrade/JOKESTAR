@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NSFWJoke should match the snapshot 1`] = `
+<section
+  className="nsfw-joke-container"
+>
+  <section
+    className="joke-section"
+  >
+    <Joke
+      joke={
+        Object {
+          "delivery": "enough to bresk the ice",
+          "id": 42,
+          "setup": "how much does a polarbear weigh?",
+        }
+      }
+    />
+  </section>
+  <section
+    className="buttons-section"
+  >
+    <button
+      className="favorite-btn"
+    >
+      Favorite
+    </button>
+    <button
+      className="next-joke-btn"
+    >
+      Next Joke
+    </button>
+  </section>
+</section>
+`;

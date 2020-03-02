@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FavoriteJoke should match the snapshot 1`] = `
+<article
+  className="favorite-joke-card"
+  key="42"
+>
+  <h3
+    className="setup"
+  >
+    how much does a polarbear weigh?
+  </h3>
+  <p
+    className="punchline"
+  >
+    enough to break the ice
+  </p>
+</article>
+`;

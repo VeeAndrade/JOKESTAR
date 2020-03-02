@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LandingPage should match the snapshot 1`] = `
+<section
+  className="landing-page-section"
+>
+  <section
+    className="joke-section"
+  >
+    <Joke
+      joke={
+        Object {
+          "delivery": "enough to bresk the ice",
+          "id": 42,
+          "setup": "how much does a polarbear weigh?",
+        }
+      }
+    />
+  </section>
+  <section
+    className="must-login-error-section"
+  >
+    <p
+      className="error-msg"
+    />
+  </section>
+  <section
+    className="landing-action-buttons"
+  >
+    <button
+      className="favorite-joke-button"
+      onClick={[Function]}
+    >
+       Favorite 
+    </button>
+    <button
+      className="next-joke-button"
+      onClick={[Function]}
+    >
+      Next joke
+    </button>
+  </section>
+</section>
+`;

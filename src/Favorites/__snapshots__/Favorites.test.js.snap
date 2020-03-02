@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FavoriteJoke should match the snapshot 1`] = `
+<section
+  className="favorites-container"
+>
+  <FavoriteJoke
+    jokeObj={
+      Object {
+        "delivery": "enough to bresk the ice",
+        "id": 42,
+        "setup": "how much does a polarbear weigh?",
+      }
+    }
+    key="42"
+  />
+</section>
+`;
