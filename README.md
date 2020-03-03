@@ -4,7 +4,7 @@ Jokestar is an app built for awkward individuals like myself to help over come t
 ### Screenshots
 <img width="1439" alt="Screen Shot 2020-03-02 at 4 38 50 PM" src="https://user-images.githubusercontent.com/51575613/75729370-cf928000-5ca7-11ea-8c5f-74856b505c62.png">
 
-
+<img width="1440" alt="Screen Shot 2020-03-02 at 5 02 56 PM" src="https://user-images.githubusercontent.com/51575613/75729423-01a3e200-5ca8-11ea-8e35-c9a80af70c2c.png">
 
 ### Struggles 
 - Intent to implement React Hooks but time didn't suffice when it came to testing. 
